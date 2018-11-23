@@ -14,7 +14,7 @@ public class criminales {
 
     private String nombre;
     private int edad;
-    private int identidad;
+    private long identidad;
     private int celda;
     private ArrayList<delito> delitos = new ArrayList();
     private int años;
@@ -22,7 +22,7 @@ public class criminales {
     public criminales() {
     }
 
-    public criminales(String nombre, int edad, int identidad, int celda, int años) {
+    public criminales(String nombre, int edad, long identidad, int celda, int años) {
         this.nombre = nombre;
         this.edad = edad;
         this.identidad = identidad;
@@ -46,7 +46,7 @@ public class criminales {
         this.edad = edad;
     }
 
-    public int getIdentidad() {
+    public long getIdentidad() {
         return identidad;
     }
 
@@ -77,5 +77,12 @@ public class criminales {
     public void setAños(int años) {
         this.años = años;
     }
+
+    @Override
+    public String toString() {
+        return nombre;
+    }
+    
+    
 
 }

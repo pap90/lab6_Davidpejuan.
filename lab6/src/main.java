@@ -1,13 +1,16 @@
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author david
@@ -30,32 +33,730 @@ public class main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jd_agregarcriminal = new javax.swing.JDialog();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        tf_nombre = new javax.swing.JTextField();
+        sp_edad = new javax.swing.JSpinner();
+        tf_id = new javax.swing.JTextField();
+        sp_celda = new javax.swing.JSpinner();
+        sp_cumplir = new javax.swing.JSpinner();
+        jButton5 = new javax.swing.JButton();
+        jd_agregardelito = new javax.swing.JDialog();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        asesinato = new javax.swing.JDialog();
+        jLabel10 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        ta_descripcion = new javax.swing.JTextArea();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        cb_tipo = new javax.swing.JComboBox<>();
+        cb_culpabilidad = new javax.swing.JComboBox<>();
+        tf_arma = new javax.swing.JTextField();
+        sp_victimas = new javax.swing.JSpinner();
+        jButton13 = new javax.swing.JButton();
+        robo = new javax.swing.JDialog();
+        jLabel15 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        ta_descripcion1 = new javax.swing.JTextArea();
+        jLabel16 = new javax.swing.JLabel();
+        cb_tipo1 = new javax.swing.JComboBox<>();
+        cb_culpabilidad1 = new javax.swing.JComboBox<>();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        tf_objeto = new javax.swing.JTextField();
+        sp_valor = new javax.swing.JSpinner();
+        jButton14 = new javax.swing.JButton();
+        secuestro = new javax.swing.JDialog();
+        jButton15 = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
+        cb_tipo2 = new javax.swing.JComboBox<>();
+        cb_culpabilidad2 = new javax.swing.JComboBox<>();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        ta_descripcion2 = new javax.swing.JTextArea();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        sp_dias = new javax.swing.JSpinner();
+        sp_edadvictima = new javax.swing.JSpinner();
+        trafico = new javax.swing.JDialog();
+        jLabel25 = new javax.swing.JLabel();
+        cb_tipo3 = new javax.swing.JComboBox<>();
+        cb_culpabilidad3 = new javax.swing.JComboBox<>();
+        jButton16 = new javax.swing.JButton();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        ta_descripcion3 = new javax.swing.JTextArea();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        tf_producto = new javax.swing.JTextField();
+        sp_peso = new javax.swing.JSpinner();
+        violacion = new javax.swing.JDialog();
+        jLabel30 = new javax.swing.JLabel();
+        cb_tipo4 = new javax.swing.JComboBox<>();
+        cb_culpabilidad4 = new javax.swing.JComboBox<>();
+        jButton17 = new javax.swing.JButton();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        ta_descripcion4 = new javax.swing.JTextArea();
+        jLabel33 = new javax.swing.JLabel();
+        sp_edadvictvio = new javax.swing.JSpinner();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jl_criminales = new javax.swing.JList<>();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jList2 = new javax.swing.JList<>();
         jButton4 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+
+        jLabel4.setText("agregar criminal");
+
+        jLabel5.setText("nombre: ");
+
+        jLabel6.setText("edad: ");
+
+        jLabel7.setText("id:");
+
+        jLabel8.setText("celda:");
+
+        jLabel9.setText("año a cumplir");
+
+        sp_edad.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+
+        sp_celda.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+
+        sp_cumplir.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+
+        jButton5.setText("agregar criminal");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_agregarcriminalLayout = new javax.swing.GroupLayout(jd_agregarcriminal.getContentPane());
+        jd_agregarcriminal.getContentPane().setLayout(jd_agregarcriminalLayout);
+        jd_agregarcriminalLayout.setHorizontalGroup(
+            jd_agregarcriminalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_agregarcriminalLayout.createSequentialGroup()
+                .addGroup(jd_agregarcriminalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jd_agregarcriminalLayout.createSequentialGroup()
+                        .addGap(188, 188, 188)
+                        .addComponent(jLabel4))
+                    .addGroup(jd_agregarcriminalLayout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addGroup(jd_agregarcriminalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jd_agregarcriminalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_nombre)
+                            .addComponent(sp_edad, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+                            .addComponent(tf_id)
+                            .addComponent(sp_celda)
+                            .addComponent(sp_cumplir))))
+                .addContainerGap(198, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_agregarcriminalLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton5)
+                .addGap(29, 29, 29))
+        );
+        jd_agregarcriminalLayout.setVerticalGroup(
+            jd_agregarcriminalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_agregarcriminalLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jLabel4)
+                .addGap(25, 25, 25)
+                .addGroup(jd_agregarcriminalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(tf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(jd_agregarcriminalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(sp_edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jd_agregarcriminalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(tf_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_agregarcriminalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(sp_celda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
+                .addGroup(jd_agregarcriminalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(sp_cumplir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addComponent(jButton5)
+                .addContainerGap())
+        );
+
+        jButton8.setText("asesinato");
+
+        jButton9.setText("robo");
+
+        jButton10.setText("secuestro");
+
+        jButton11.setText("trafico de drogas");
+
+        jButton12.setText("violacion");
+
+        javax.swing.GroupLayout jd_agregardelitoLayout = new javax.swing.GroupLayout(jd_agregardelito.getContentPane());
+        jd_agregardelito.getContentPane().setLayout(jd_agregardelitoLayout);
+        jd_agregardelitoLayout.setHorizontalGroup(
+            jd_agregardelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_agregardelitoLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addGroup(jd_agregardelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jButton10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addGroup(jd_agregardelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton9)
+                    .addComponent(jButton11))
+                .addGap(91, 91, 91))
+            .addGroup(jd_agregardelitoLayout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jd_agregardelitoLayout.setVerticalGroup(
+            jd_agregardelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_agregardelitoLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addGroup(jd_agregardelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton8)
+                    .addComponent(jButton9))
+                .addGap(42, 42, 42)
+                .addGroup(jd_agregardelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton10)
+                    .addComponent(jButton11))
+                .addGap(33, 33, 33)
+                .addComponent(jButton12)
+                .addContainerGap(72, Short.MAX_VALUE))
+        );
+
+        jLabel10.setText("descripcion");
+
+        ta_descripcion.setColumns(20);
+        ta_descripcion.setRows(5);
+        jScrollPane3.setViewportView(ta_descripcion);
+
+        jLabel11.setText("tipo");
+
+        jLabel12.setText("culpabilidad");
+
+        jLabel13.setText("arma");
+
+        jLabel14.setText("victimas");
+
+        cb_tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "leve", "grave", "moderado" }));
+
+        cb_culpabilidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "culpable", "inocente" }));
+
+        sp_victimas.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+
+        jButton13.setText("agregar");
+        jButton13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton13MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout asesinatoLayout = new javax.swing.GroupLayout(asesinato.getContentPane());
+        asesinato.getContentPane().setLayout(asesinatoLayout);
+        asesinatoLayout.setHorizontalGroup(
+            asesinatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(asesinatoLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(asesinatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14)
+                    .addGroup(asesinatoLayout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(asesinatoLayout.createSequentialGroup()
+                        .addGroup(asesinatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(asesinatoLayout.createSequentialGroup()
+                                .addComponent(jLabel11)
+                                .addGap(90, 90, 90)
+                                .addComponent(cb_tipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(asesinatoLayout.createSequentialGroup()
+                                .addGroup(asesinatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(asesinatoLayout.createSequentialGroup()
+                                        .addComponent(jLabel12)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, asesinatoLayout.createSequentialGroup()
+                                        .addComponent(jLabel13)
+                                        .addGap(92, 92, 92)))
+                                .addGroup(asesinatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cb_culpabilidad, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(sp_victimas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tf_arma))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                        .addComponent(jButton13)))
+                .addContainerGap())
+        );
+        asesinatoLayout.setVerticalGroup(
+            asesinatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(asesinatoLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(asesinatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(cb_tipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(asesinatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(asesinatoLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addGroup(asesinatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel12)
+                            .addComponent(cb_culpabilidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, asesinatoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGroup(asesinatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(tf_arma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(asesinatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(sp_victimas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(asesinatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, asesinatoLayout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addGap(80, 80, 80))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, asesinatoLayout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
+        );
+
+        jLabel15.setText("descripcion");
+
+        ta_descripcion1.setColumns(20);
+        ta_descripcion1.setRows(5);
+        jScrollPane4.setViewportView(ta_descripcion1);
+
+        jLabel16.setText("culpabilidad");
+
+        cb_tipo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "leve", "grave", "moderado" }));
+
+        cb_culpabilidad1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "culpable", "inocente" }));
+
+        jLabel17.setText("tipo");
+
+        jLabel18.setText("objeto");
+
+        jLabel19.setText("valor");
+
+        sp_valor.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+
+        jButton14.setText("agregar");
+        jButton14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton14MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout roboLayout = new javax.swing.GroupLayout(robo.getContentPane());
+        robo.getContentPane().setLayout(roboLayout);
+        roboLayout.setHorizontalGroup(
+            roboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, roboLayout.createSequentialGroup()
+                .addContainerGap(28, Short.MAX_VALUE)
+                .addGroup(roboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(roboLayout.createSequentialGroup()
+                        .addGroup(roboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(roboLayout.createSequentialGroup()
+                                .addComponent(jLabel17)
+                                .addGap(90, 90, 90)
+                                .addComponent(cb_tipo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(roboLayout.createSequentialGroup()
+                                .addGroup(roboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(roboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(roboLayout.createSequentialGroup()
+                                            .addComponent(jLabel16)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, roboLayout.createSequentialGroup()
+                                            .addComponent(jLabel18)
+                                            .addGap(66, 66, 66)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, roboLayout.createSequentialGroup()
+                                        .addComponent(jLabel19)
+                                        .addGap(77, 77, 77)))
+                                .addGroup(roboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cb_culpabilidad1, 0, 117, Short.MAX_VALUE)
+                                    .addComponent(tf_objeto)
+                                    .addComponent(sp_valor))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton14))
+                    .addGroup(roboLayout.createSequentialGroup()
+                        .addComponent(jLabel15)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        roboLayout.setVerticalGroup(
+            roboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, roboLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(roboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(cb_tipo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(roboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(roboLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addGroup(roboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel16)
+                            .addComponent(cb_culpabilidad1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(22, 22, 22)
+                        .addGroup(roboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel18)
+                            .addComponent(tf_objeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, roboLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton14)
+                        .addGap(27, 27, 27)))
+                .addGroup(roboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(roboLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel19)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, roboLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                        .addComponent(sp_valor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addGroup(roboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, roboLayout.createSequentialGroup()
+                        .addComponent(jLabel15)
+                        .addGap(68, 68, 68))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        jButton15.setText("agregar");
+        jButton15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton15MouseClicked(evt);
+            }
+        });
+
+        jLabel20.setText("culpabilidad");
+
+        cb_tipo2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "leve", "grave", "moderado" }));
+
+        cb_culpabilidad2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "culpable", "inocente" }));
+
+        jLabel21.setText("tipo");
+
+        jLabel22.setText("descripcion");
+
+        ta_descripcion2.setColumns(20);
+        ta_descripcion2.setRows(5);
+        jScrollPane5.setViewportView(ta_descripcion2);
+
+        jLabel23.setText("dias");
+
+        jLabel24.setText("edad victima");
+
+        sp_dias.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+
+        sp_edadvictima.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+
+        javax.swing.GroupLayout secuestroLayout = new javax.swing.GroupLayout(secuestro.getContentPane());
+        secuestro.getContentPane().setLayout(secuestroLayout);
+        secuestroLayout.setHorizontalGroup(
+            secuestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(secuestroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(secuestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(secuestroLayout.createSequentialGroup()
+                        .addGroup(secuestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(secuestroLayout.createSequentialGroup()
+                                .addComponent(jLabel21)
+                                .addGap(90, 90, 90)
+                                .addComponent(cb_tipo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(secuestroLayout.createSequentialGroup()
+                                .addComponent(jLabel20)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cb_culpabilidad2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton15)
+                        .addGap(28, 28, 28))
+                    .addGroup(secuestroLayout.createSequentialGroup()
+                        .addGroup(secuestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel24)
+                            .addComponent(jLabel22))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
+            .addGroup(secuestroLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel23)
+                .addGap(89, 89, 89)
+                .addGroup(secuestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(sp_edadvictima, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sp_dias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        secuestroLayout.setVerticalGroup(
+            secuestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(secuestroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(secuestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(cb_tipo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(secuestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(secuestroLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addGroup(secuestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel20)
+                            .addComponent(cb_culpabilidad2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(24, 24, 24))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, secuestroLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton15)))
+                .addGap(5, 5, 5)
+                .addGroup(secuestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(sp_dias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(secuestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(sp_edadvictima, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(secuestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel22)))
+        );
+
+        jLabel25.setText("culpabilidad");
+
+        cb_tipo3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "leve", "grave", "moderado" }));
+
+        cb_culpabilidad3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "culpable", "inocente" }));
+
+        jButton16.setText("agregar");
+        jButton16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton16MouseClicked(evt);
+            }
+        });
+
+        jLabel26.setText("tipo");
+
+        jLabel27.setText("descripcion");
+
+        ta_descripcion3.setColumns(20);
+        ta_descripcion3.setRows(5);
+        jScrollPane6.setViewportView(ta_descripcion3);
+
+        jLabel28.setText("producto");
+
+        jLabel29.setText("peso");
+
+        sp_peso.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+
+        javax.swing.GroupLayout traficoLayout = new javax.swing.GroupLayout(trafico.getContentPane());
+        trafico.getContentPane().setLayout(traficoLayout);
+        traficoLayout.setHorizontalGroup(
+            traficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(traficoLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(traficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(traficoLayout.createSequentialGroup()
+                        .addGroup(traficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(traficoLayout.createSequentialGroup()
+                                .addComponent(jLabel26)
+                                .addGap(90, 90, 90)
+                                .addComponent(cb_tipo3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(traficoLayout.createSequentialGroup()
+                                .addGroup(traficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel25)
+                                    .addComponent(jLabel28))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(traficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(sp_peso, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                                    .addGroup(traficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(cb_culpabilidad3, 0, 117, Short.MAX_VALUE)
+                                        .addComponent(tf_producto)))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton16))
+                    .addGroup(traficoLayout.createSequentialGroup()
+                        .addGroup(traficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel29)
+                            .addGroup(traficoLayout.createSequentialGroup()
+                                .addComponent(jLabel27)
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 84, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        traficoLayout.setVerticalGroup(
+            traficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(traficoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(traficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(cb_tipo3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(traficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(traficoLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addGroup(traficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel25)
+                            .addComponent(cb_culpabilidad3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addGroup(traficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel28)
+                            .addComponent(tf_producto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(traficoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton16)))
+                .addGroup(traficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(traficoLayout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jLabel29)
+                        .addGap(35, 35, 35))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, traficoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(sp_peso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
+                .addGroup(traficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, traficoLayout.createSequentialGroup()
+                        .addComponent(jLabel27)
+                        .addGap(68, 68, 68))
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jLabel30.setText("culpabilidad");
+
+        cb_tipo4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "leve", "grave", "moderado" }));
+
+        cb_culpabilidad4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "culpable", "inocente" }));
+
+        jButton17.setText("agregar");
+        jButton17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton17MouseClicked(evt);
+            }
+        });
+
+        jLabel31.setText("tipo");
+
+        jLabel32.setText("descripcion");
+
+        ta_descripcion4.setColumns(20);
+        ta_descripcion4.setRows(5);
+        jScrollPane7.setViewportView(ta_descripcion4);
+
+        jLabel33.setText("edad de la victima");
+
+        sp_edadvictvio.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+
+        javax.swing.GroupLayout violacionLayout = new javax.swing.GroupLayout(violacion.getContentPane());
+        violacion.getContentPane().setLayout(violacionLayout);
+        violacionLayout.setHorizontalGroup(
+            violacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(violacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(violacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, violacionLayout.createSequentialGroup()
+                        .addGroup(violacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(violacionLayout.createSequentialGroup()
+                                .addComponent(jLabel31)
+                                .addGap(90, 90, 90)
+                                .addComponent(cb_tipo4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(violacionLayout.createSequentialGroup()
+                                .addComponent(jLabel30)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cb_culpabilidad4, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton17))
+                    .addGroup(violacionLayout.createSequentialGroup()
+                        .addGroup(violacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(violacionLayout.createSequentialGroup()
+                                .addComponent(jLabel32)
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(violacionLayout.createSequentialGroup()
+                                .addComponent(jLabel33)
+                                .addGap(50, 50, 50)
+                                .addComponent(sp_edadvictvio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 16, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        violacionLayout.setVerticalGroup(
+            violacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(violacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(violacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel31)
+                    .addComponent(cb_tipo4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(violacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(violacionLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addGroup(violacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel30)
+                            .addComponent(cb_culpabilidad4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 5, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, violacionLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton17)))
+                .addGap(27, 27, 27)
+                .addGroup(violacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel33)
+                    .addComponent(sp_edadvictvio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(violacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, violacionLayout.createSequentialGroup()
+                        .addComponent(jLabel32)
+                        .addGap(68, 68, 68))
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Ubuntu", 3, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Ubuntu", 3, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(254, 35, 22));
         jLabel1.setText("El pozo");
 
         jButton1.setText("Agregar criminal");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
 
         jButton2.setText("modificar criminal");
 
         jButton3.setText("crear expediente");
 
-        jList1.setModel(new DefaultListModel());
-        jScrollPane1.setViewportView(jList1);
+        jl_criminales.setModel(new DefaultListModel());
+        jScrollPane1.setViewportView(jl_criminales);
 
         jLabel2.setText("Criminales");
 
@@ -66,43 +767,58 @@ public class main extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jList2);
 
         jButton4.setText("Cargar criminales");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+
+        jButton6.setText("agregar delito");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
+
+        jButton7.setText("agregar al archivo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(192, 192, 192)
-                .addComponent(jLabel1))
-            .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton7))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(23, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(125, 125, 125)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel3)
-                        .addGap(83, 83, 83))))
+                        .addGap(83, 83, 83))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(24, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(217, 217, 217)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(59, 59, 59)
+                        .addGap(119, 119, 119)
                         .addComponent(jButton4)
                         .addGap(18, 18, 18)
                         .addComponent(jButton1)
@@ -110,9 +826,15 @@ public class main extends javax.swing.JFrame {
                         .addComponent(jButton2)
                         .addGap(18, 18, 18)
                         .addComponent(jButton3)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton6)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton7)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(jLabel3))
@@ -120,11 +842,86 @@ public class main extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap())
+                .addGap(465, 465, 465))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+        administrar_criminales ac = new administrar_criminales("./criminales.txt");
+        ac.cargararchivo();
+        DefaultListModel modelo = (DefaultListModel) jl_criminales.getModel();
+        if (f == false) {
+            for (int i = 0; i < ac.getCriminales().size(); i++) {
+                modelo.addElement(ac.getCriminales().get(i));
+                criminales.add(ac.getCriminales().get(i));
+            }
+        }
+        f = true;
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+        String nombre = tf_nombre.getText();
+        int edad = (Integer) sp_edad.getValue();
+        long id = Long.parseLong(tf_id.getText());
+        int celda = (Integer) sp_celda.getValue();
+        int años = (Integer) sp_cumplir.getValue();
+        criminales c = new criminales(nombre, edad, id, celda, años);
+        criminales.add(c);
+        jd_agregarcriminal.dispose();
+
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        jd_agregarcriminal.setModal(true);
+        jd_agregarcriminal.pack();
+        jd_agregarcriminal.setLocationRelativeTo(this);
+        jd_agregarcriminal.setVisible(true);
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        // TODO add your handling code here:
+        if (jl_criminales.getSelectedIndex()>=0) {
+            jd_agregardelito.setModal(true);
+            jd_agregardelito.pack();
+            jd_agregardelito.setLocationRelativeTo(this);
+            jd_agregardelito.setVisible(true);
+        }
+    }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jButton13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton13MouseClicked
+        // TODO add your handling code here:
+        DefaultListModel modelo=(DefaultListModel) jl_criminales.getModel();
+        ((criminales)modelo.get(jl_criminales.getSelectedIndex())).getDelitos().add(new asesinato(tf_arma.getText(), (Integer)sp_victimas.getValue(), 1, ta_descripcion.getText(), cb_tipo.getSelectedItem().toString(), cb_culpabilidad.getSelectedItem().toString()));
+    }//GEN-LAST:event_jButton13MouseClicked
+
+    private void jButton14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton14MouseClicked
+        // TODO add your handling code here:
+        DefaultListModel modelo=(DefaultListModel) jl_criminales.getModel();
+        ((criminales)modelo.get(jl_criminales.getSelectedIndex())).getDelitos().add(new robo(tf_objeto.getText(), (Integer)sp_valor.getValue(), 2, ta_descripcion1.getText(), cb_tipo1.getSelectedItem().toString(), cb_culpabilidad1.getSelectedItem().toString()));
+    }//GEN-LAST:event_jButton14MouseClicked
+
+    private void jButton15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton15MouseClicked
+        // TODO add your handling code here:
+        DefaultListModel modelo=(DefaultListModel) jl_criminales.getModel();
+        ((criminales)modelo.get(jl_criminales.getSelectedIndex())).getDelitos().add(new secuestro((Integer)sp_dias.getValue(), (Integer)sp_edad.getValue(), 3, ta_descripcion2.getText(), cb_tipo2.getSelectedItem().toString(), cb_culpabilidad2.getSelectedItem().toString()));
+    }//GEN-LAST:event_jButton15MouseClicked
+
+    private void jButton16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton16MouseClicked
+        // TODO add your handling code here:
+        DefaultListModel modelo=(DefaultListModel) jl_criminales.getModel();
+        ((criminales)modelo.get(jl_criminales.getSelectedIndex())).getDelitos().add(new trafico_de_drogas(tf_producto.getText(), (Integer)sp_peso.getValue(), 4, ta_descripcion3.getText(), cb_tipo3.getSelectedItem().toString(), cb_culpabilidad3.getSelectedItem().toString()));
+    }//GEN-LAST:event_jButton16MouseClicked
+
+    private void jButton17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton17MouseClicked
+        // TODO add your handling code here:
+        DefaultListModel modelo=(DefaultListModel) jl_criminales.getModel();
+        ((criminales)modelo.get(jl_criminales.getSelectedIndex())).getDelitos().add(new violacion((Integer)sp_edadvictvio.getValue(), 5, ta_descripcion4.getText(), cb_tipo4.getSelectedItem().toString(), cb_culpabilidad4.getSelectedItem().toString()));
+    }//GEN-LAST:event_jButton17MouseClicked
 
     /**
      * @param args the command line arguments
@@ -162,17 +959,102 @@ public class main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog asesinato;
+    private javax.swing.JComboBox<String> cb_culpabilidad;
+    private javax.swing.JComboBox<String> cb_culpabilidad1;
+    private javax.swing.JComboBox<String> cb_culpabilidad2;
+    private javax.swing.JComboBox<String> cb_culpabilidad3;
+    private javax.swing.JComboBox<String> cb_culpabilidad4;
+    private javax.swing.JComboBox<String> cb_tipo;
+    private javax.swing.JComboBox<String> cb_tipo1;
+    private javax.swing.JComboBox<String> cb_tipo2;
+    private javax.swing.JComboBox<String> cb_tipo3;
+    private javax.swing.JComboBox<String> cb_tipo4;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JList<String> jList1;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JDialog jd_agregarcriminal;
+    private javax.swing.JDialog jd_agregardelito;
+    private javax.swing.JList<String> jl_criminales;
+    private javax.swing.JDialog robo;
+    private javax.swing.JDialog secuestro;
+    private javax.swing.JSpinner sp_celda;
+    private javax.swing.JSpinner sp_cumplir;
+    private javax.swing.JSpinner sp_dias;
+    private javax.swing.JSpinner sp_edad;
+    private javax.swing.JSpinner sp_edadvictima;
+    private javax.swing.JSpinner sp_edadvictvio;
+    private javax.swing.JSpinner sp_peso;
+    private javax.swing.JSpinner sp_valor;
+    private javax.swing.JSpinner sp_victimas;
+    private javax.swing.JTextArea ta_descripcion;
+    private javax.swing.JTextArea ta_descripcion1;
+    private javax.swing.JTextArea ta_descripcion2;
+    private javax.swing.JTextArea ta_descripcion3;
+    private javax.swing.JTextArea ta_descripcion4;
+    private javax.swing.JTextField tf_arma;
+    private javax.swing.JTextField tf_id;
+    private javax.swing.JTextField tf_nombre;
+    private javax.swing.JTextField tf_objeto;
+    private javax.swing.JTextField tf_producto;
+    private javax.swing.JDialog trafico;
+    private javax.swing.JDialog violacion;
     // End of variables declaration//GEN-END:variables
-    ArrayList<criminales> criminales=new ArrayList();
+   ArrayList<criminales> criminales = new ArrayList();
+    boolean f = false;
 }
