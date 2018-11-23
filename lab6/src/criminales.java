@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author david
  */
 public class criminales {
-    
+
     private String nombre;
     private int edad;
     private int identidad;

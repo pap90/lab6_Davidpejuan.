@@ -50,6 +50,15 @@ public class delito {
     public void setCulpabilidad(String culpabilidad) {
         this.culpabilidad = culpabilidad;
     }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+    
     
     
 }
